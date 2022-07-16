@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gMostraBt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="btInform"
+        android:visibility="invisible"
+        >
+
+    </androidx.constraintlayout.widget.Group>
+
+    <TextView
+        android:id="@+id/tvIMC"
+        style="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/imc_titulo"
+        android:textAlignment="center"
+        android:textColor="@color/blue900"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPeso"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:hint="@string/peso"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/etAltura"
+        app:layout_constraintEnd_toEndOf="@+id/tvIMC"
+        app:layout_constraintStart_toStartOf="@+id/tvIMC" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/grupo_Imc_Calc"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="tvIMC, btCalcula"
+        >
+
+    </androidx.constraintlayout.widget.Group>
+
+    <EditText
+        android:id="@+id/etAltura"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:hint="@string/altura"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btCalcula"
+        app:layout_constraintEnd_toEndOf="@+id/etPeso"
+        app:layout_constraintStart_toStartOf="@+id/etPeso" />
+
+    <Button
+        android:id="@+id/btCalcula"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/Calcular"
+        app:layout_constraintBottom_toTopOf="@+id/btInform"
+        app:layout_constraintEnd_toEndOf="@+id/etAltura"
+        app:layout_constraintStart_toStartOf="@+id/etAltura" />
+
+    <Button
+        android:id="@+id/btInform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="@string/bt_inform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcula"
+        app:layout_constraintStart_toStartOf="@+id/btCalcula" />
+</androidx.constraintlayout.widget.ConstraintLayout>

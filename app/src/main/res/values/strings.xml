@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Best BMI Calculator</string>
+    <string name="World">Hello World!</string>
+    <string name="imc_titulo">BMI</string>
+    <string name="peso">Weight (ex: 155.4 ibs)</string>
+    <string name="altura">Height (ex: 5′ 7″)</string>
+    <string name="Calcular">Calculate</string>
+    <string name="bt_inform">Information</string>
+
+</resources>
